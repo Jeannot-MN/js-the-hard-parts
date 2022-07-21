@@ -2,9 +2,11 @@ function withMemoization(func) {
     const cache = {};
 
     return function memoized(...args) {
+        const start = new Date();
         const key = JSON.stringify(args);
         if (cache[key]) {
             console.log("This is memoized!!!");
+            console.log(new Date() - start);
             return cache[key];
         }
 
@@ -13,6 +15,7 @@ function withMemoization(func) {
         const result = func(...args);
         cache[key] = result;
 
+        console.log(new Date() - start);
         return result;
     };
 }
