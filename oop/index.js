@@ -26,6 +26,8 @@ const functionStore = {
         }
 
         example();
+
+        example.call(this);
     }
 }
 
@@ -43,7 +45,3 @@ console.log(betterUser.age);
 
 const betterUser2 = BetterUser("Will", 32);
 betterUser2.increment();
-
-console.log(this);
-
-console.log(this.queueMicrotask)
