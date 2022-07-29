@@ -17,7 +17,16 @@ console.log(user1.age);
 //Better approach
 
 const functionStore = {
-    increment: function() { this.age++; }
+    increment: function() {
+        console.log(this);
+        this.age++;
+
+        function example() {
+            console.log(this);
+        }
+
+        example();
+    }
 }
 
 function BetterUser(name, age) {
@@ -30,5 +39,11 @@ function BetterUser(name, age) {
 
 const betterUser = BetterUser("Jane", 34);
 betterUser.increment();
-
 console.log(betterUser.age);
+
+const betterUser2 = BetterUser("Will", 32);
+betterUser2.increment();
+
+console.log(this);
+
+console.log(this.queueMicrotask)
