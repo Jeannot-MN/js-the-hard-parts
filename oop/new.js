@@ -30,3 +30,19 @@ console.log(user.static === user2.static);
 console.log(user2.increment === user.increment);
 
 console.log(User.prototype);
+
+
+//Does this work?
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+
+    return this;
+}
+
+Person.prototype.greet = function() {
+    console.log(this.name + " " + "Hi");
+}
+const p = Person("John", 35);
+console.log(p.age);
+p.greet();
