@@ -2,8 +2,13 @@ function iteration(array) {
     let index = 0;
     return {
         next: function() {
-            if (index >= array.length) throw Error("No such element")
-            array[index++];
+            if (index >= array.length - 1) return array[index];
+            return array[index++];
+        },
+
+        previous: function() {
+            if (index === 0) return array[index];
+            return array[index--];
         }
     }
 }
@@ -18,3 +23,10 @@ console.log(iterator.next());
 console.log(iterator.next());
 console.log(iterator.next());
 console.log(iterator.next());
+console.log(iterator.previous());
+console.log(iterator.previous());
+console.log(iterator.previous());
+console.log(iterator.previous());
+console.log(iterator.previous());
+console.log(iterator.previous());
+console.log(iterator.previous());
