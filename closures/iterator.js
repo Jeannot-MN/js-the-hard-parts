@@ -15,6 +15,15 @@ function iteration(array) {
 
 const array = [1, 2, 3, 4, 5]
 const iterator = iteration(array);
+
+//Let's have fun
+Object.prototype.next = function() {
+    return "What did you think";
+}
+
+console.log("5".next());
+console.log(array.next());
+
 console.log(iterator.next());
 console.log(iterator.next());
 console.log(iterator.next());
