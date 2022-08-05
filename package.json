@@ -1,20 +1,24 @@
 {
-  "name": "js-the-hard-parts",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Jeannot-MN/js-the-hard-parts.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Jeannot-MN/js-the-hard-parts/issues"
-  },
-  "homepage": "https://github.com/Jeannot-MN/js-the-hard-parts#readme"
+    "name": "js-the-hard-parts",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Jeannot-MN/js-the-hard-parts.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Jeannot-MN/js-the-hard-parts/issues"
+    },
+    "homepage": "https://github.com/Jeannot-MN/js-the-hard-parts#readme",
+    "dependencies": {
+        "node-fetch": "^3.2.10"
+    }
 }

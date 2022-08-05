@@ -5,7 +5,21 @@ function* generator() {
     yield 3;
 }
 
-const gen = generator();
+function* createFlow() {
+    const num = 10
+    const newNum = yield num
+
+    const ss = yield newNum + 2
+    yield ss();
+}
+
+/* const gen = generator();
 
 console.log(gen.next());
-console.log(gen.next());
+console.log(gen.next()); */
+
+const gen = createFlow();
+
+console.log(gen.next(2));
+console.log(gen.next(2));
+console.log(gen.next(function() { return 4 }));
