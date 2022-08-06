@@ -14,3 +14,8 @@ function multiplyBy2(num) {
 
 const array = [1, 2, 3, 4];
 console.log(map(array, multiplyBy2));
+
+console.log(array.reduce(function(prev, curr) {
+    prev.push(multiplyBy2(curr));
+    return prev;
+}, []));
