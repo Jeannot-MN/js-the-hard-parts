@@ -8,6 +8,13 @@ function map(array, operation) {
     return result;
 }
 
+function mapReduce(array, operation) {
+    return array.reduce((prev, curr) => {
+        prev.push(operation(curr));
+        return prev;
+    }, [])
+}
+
 function multiplyBy2(num) {
     return num * 2;
 }
@@ -15,7 +22,4 @@ function multiplyBy2(num) {
 const array = [1, 2, 3, 4];
 console.log(map(array, multiplyBy2));
 
-console.log(array.reduce(function(prev, curr) {
-    prev.push(multiplyBy2(curr));
-    return prev;
-}, []));
+console.log(mapReduce(array, multiplyBy2));
