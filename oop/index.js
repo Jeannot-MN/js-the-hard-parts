@@ -15,7 +15,6 @@ user1.increment();
 console.log(user1.age);
 
 //Better approach
-
 const functionStore = {
     increment: function() {
         console.log(this);
