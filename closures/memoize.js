@@ -11,7 +11,6 @@ function withMemoization(func) {
         }
 
         console.log("Oops I have never seen this input");
-
         const result = func(...args);
         cache[key] = result;
 
