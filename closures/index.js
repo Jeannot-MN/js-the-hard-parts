@@ -29,3 +29,6 @@ func();
 
 object.value = 10;
 func();
+
+const func2 = new outer(object);
+func2();
