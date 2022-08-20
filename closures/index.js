@@ -14,3 +14,10 @@ setAge(2);
 
 
 console.log(age);
+
+function outer(object) {
+
+    return function() {
+        console.log(object.value);
+    }
+}
