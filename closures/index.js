@@ -11,8 +11,6 @@ function useState(intialState) {
 const [age, setAge] = useState(0);
 
 setAge(2);
-
-
 console.log(age);
 
 function outer(object) {
@@ -21,3 +19,13 @@ function outer(object) {
         console.log(object.value);
     }
 }
+
+const object = {
+    value: 0
+}
+
+const func = outer(object);
+func();
+
+object.value = 10;
+func();
