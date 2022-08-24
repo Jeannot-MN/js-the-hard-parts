@@ -1,4 +1,4 @@
-import { Array, swap } from "./utils.js";
+import { Array } from "./utils.js";
 
 function bubble_sort(array) {
     for (let sorted_index = array.size - 1; sorted_index > 0; sorted_index--) {
