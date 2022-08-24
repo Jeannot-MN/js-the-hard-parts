@@ -35,3 +35,7 @@ Array.prototype.setData = function(data) {
     this.pos = data.length;
     this.size = data.length;
 }
+
+Array.prototype.at = function(index) {
+    return this.data[index];
+}
