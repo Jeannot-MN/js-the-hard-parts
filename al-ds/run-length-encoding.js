@@ -19,4 +19,17 @@ function encode(input) {
     return result;
 }
 
+
+function decode(encoding) {
+    let result = "";
+
+    if (!encoding || encoding.length === 0) return result;
+
+    for (let i = 0; i < encoding.length; i += 2) {
+        result += encoding[i + 1].repeat(+encoding[i]);
+    }
+
+    return result;
+}
 console.log(encode("aaaabbbaaddzzcc"));
+console.log(decode("4a3b2a2d2z2c"));
