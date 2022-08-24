@@ -23,8 +23,15 @@ Array.prototype.randomize = function() {
     for (let i = 0; i < this.size; i++) {
         this.data[i] = Math.floor(Math.random() * (this.size + 1));
     }
+    this.pos = this.size;
 }
 
-Array.prototype.pop = function() {
+Array.prototype.swap = function(i, j) {
+    [this.data[i], this.data[j]] = [this.data[j], this.data[i]]
+}
 
+Array.prototype.setData = function(data) {
+    this.data = data;
+    this.pos = data.length;
+    this.size = data.length;
 }
