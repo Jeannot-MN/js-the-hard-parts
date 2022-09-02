@@ -3,11 +3,12 @@ const person = {
     surname: "Smith"
 }
 
-const proxy = new Proxy(person, (key, target) => {
-    console.log(key);
-    if (key === 'name') return target.toUppercase();
+const proxy = new Proxy(person, {
+    get(target, key) {
+        if (target === 'name') return target.toUpperCase();
 
-    return target;
+        return target;
+    }
 });
 
-console.log(proxy['name']);;
+console.log(proxy.name);
