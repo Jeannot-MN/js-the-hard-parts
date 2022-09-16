@@ -24,3 +24,15 @@ function firstDuplicate2(array) {
 
     return -1;
 }
+
+function firstDuplicateValue(array) {
+    let index;
+    for (let n of array) {
+        index = Math.abs(n) - 1;
+        if (array[index] < 0) return Math.abs(n);
+
+        array[index] *= -1;
+    }
+
+    return -1;
+}
