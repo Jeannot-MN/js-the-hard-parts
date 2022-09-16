@@ -10,3 +10,17 @@ function firstDuplicate(array) {
 
     return -1;
 }
+
+function firstDuplicate2(array) {
+    const values = new Set();
+
+    for (const n of array) {
+        if (values.has(n)) {
+            return n;
+        } else {
+            values.add(n);
+        }
+    }
+
+    return -1;
+}
