@@ -1,4 +1,6 @@
-var a = 4;
+function square(n) {
+    return n * n;
+}
 
 
-console.log(this.a);
+let number = square(5);

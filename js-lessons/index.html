@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let counter = 0;
+
+        function Increment() {
+            counter++;
+            console.log(counter);
+
+            document.getElementById("count").innerText = counter;
+
+        }
+
+        function Decrement() {
+            if (counter >= 0) {
+                counter--;
+                console.log(counter);
+
+                document.getElementById("count").innerText = counter;
+            } else {
+                counter;
+            }
+
+        }
+        //let result = 0;
+
+        function Calculate() {
+            let input = document.getElementById("num").value;
+            const result = eval(input);
+            console.log(result);
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+</head>
+
+<body>
+
+    <label class="123" id="count">0</label></br>
+    <button onclick="Increment()">Increment</button></br>
+    <button onclick="Decrement()">Decrement</button></br>
+    <input id="num"></input> <button onclick="Calculate()">Evaluate</button><br/>
+    <label id="result">0</label>
+
+</body>
+
+</html>
