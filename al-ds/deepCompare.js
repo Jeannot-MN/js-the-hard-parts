@@ -4,6 +4,8 @@ Array.prototype.deepCompare = function(array2) {
 
 
 const a = [1, 2, 3];
-const b = [1, 2, 3];
+let b = [1, 2, 3];
+console.log(a.deepCompare(b));
 
+b = [2, 3];
 console.log(a.deepCompare(b));
