@@ -1,6 +1,5 @@
 function firstNonRepeatingCharacter(string) {
     let occurences = {};
-
     for (let i = 0; i < string.length; i++) {
         occurences[string[i]] = occurences[string[i]] ? occurences[string[i]] + 1 : 1;
     }
