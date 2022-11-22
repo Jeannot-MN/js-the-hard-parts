@@ -5,7 +5,6 @@ function reduce(array, reducer, accumulator) {
     return accumulator;
 }
 
-
 function map(array, operation) {
     return reduce(array, (prev, curr) => {
         prev.push(operation(curr));
