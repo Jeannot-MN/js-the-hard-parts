@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id="firstNumber" />
+    <label>+</label>
+    <input id="secondNumber" />
+    <button id="addition">=</button>
+    <label id="result">0</label>
+
+
+    <br/>
+    <br/>
+
+    <input id="expression" />
+    <button id="equals">=</button>
+    <label id="result">0</label>
+</body>
+
+<script>
+    let result = document.getElementById("result");
+    let button = document.getElementById("addition");
+    let firstNumber = document.getElementById("firstNumber");
+    let secondNumber = document.getElementById("secondNumber");
+
+
+    button.addEventListener('click', function() {
+
+        result.innerText = parseInt(firstNumber.value) + parseInt(secondNumber.value);
+    })
+</script>
+
+</html>
