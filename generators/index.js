@@ -13,10 +13,10 @@ function* createFlow() {
     yield ss();
 }
 
-const gen = generator();
+/* const gen = generator();
 
 console.log(gen.next());
-console.log(gen.next());
+console.log(gen.next()); */
 
 const gen = createFlow();
 
