@@ -13,6 +13,10 @@ function* createFlow() {
     console.log(data);
 }
 
+function helloWorld() {
+    return "Hello world! This comes from fleet."
+}
+
 const returnNextElement = createFlow();
 const futureData = returnNextElement.next();
 console.log(futureData);
