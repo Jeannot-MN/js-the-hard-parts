@@ -1,5 +1,3 @@
-// import fetch from 'node-fetch';
-
 function doWhenCompleted(value) {
     returnNextElement.next(value);
 }
